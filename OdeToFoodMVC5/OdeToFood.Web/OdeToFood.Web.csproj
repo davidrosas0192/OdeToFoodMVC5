@@ -270,9 +270,16 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Restaurants\Delete.cshtml" />
+    <Content Include="Views\Restaurants\_RestaurantSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OdeToFood.NetFrameWork.Data\OdeToFood.NetFrameWork.Data.csproj">
+      <Project>{FDD50047-877A-4E81-8B74-A62310FFAC1C}</Project>
+      <Name>OdeToFood.NetFrameWork.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

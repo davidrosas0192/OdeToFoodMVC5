@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OdeToFood.Data.Models.Restaurant>
+﻿@model IEnumerable<OdeToFood.NetFrameWork.Data.Models.Restaurant>
 
 @{
     ViewBag.Title = "Index";
@@ -9,7 +9,12 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+@foreach(var item in Model)
+{
+    @Html.Partial("_RestaurantSummary", item)
+}
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -30,4 +35,4 @@
     </tr>
 }
 
-</table>
+</table>*@
