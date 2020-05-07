@@ -16,13 +16,15 @@ namespace OdeToFood.Web.App_Start
         internal static void RegisterContainer(HttpConfiguration httpConfiguration)
         {
             var builder = new ContainerBuilder();
+
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
-            //builder.RegisterType<SqlRestaurantData>()
-            builder.RegisterType<InMemoryRestaurantData>()
+            builder.RegisterType<SqlRestaurantData>()
+            //builder.RegisterType<InMemoryRestaurantData>()
                    .As<IRestaurantData>()
-                   .SingleInstance();
-            //builder.RegisterType<OdToFoodDbContext>().InstancePerRequest();
+                   .InstancePerRequest();
+                   //.SingleInstance();
+            builder.RegisterType<OdeToFoodDbContext>().InstancePerRequest();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

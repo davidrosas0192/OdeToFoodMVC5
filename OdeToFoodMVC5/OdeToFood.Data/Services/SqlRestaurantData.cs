@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using OdeToFood.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 
@@ -9,9 +10,9 @@ namespace OdeToFood.Data.Services
 {
     public class SqlRestaurantData : IRestaurantData
     {
-        private readonly OdToFoodDbContext db;
+        private readonly OdeToFoodDbContext db;
 
-        public SqlRestaurantData(OdToFoodDbContext db)
+        public SqlRestaurantData(OdeToFoodDbContext db)
         {
             this.db = db;
         }

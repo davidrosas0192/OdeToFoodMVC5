@@ -5,13 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\OdToFoodDbContext.cs" />
-    <Compile Remove="Services\SqlRestaurantData.cs" />
+    <PackageReference Include="EntityFramework" Version="6.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.DataAnnotations" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.DataAnnotations" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\OdeToFood.Web\Bin\EntityFramework.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
