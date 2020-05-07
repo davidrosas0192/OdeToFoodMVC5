@@ -1,8 +1,11 @@
-﻿using OdeToFood.Data.Models;
+﻿using OdeToFood.NetFrameWork.Data.Models;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace OdeToFood.Data.Services
+namespace OdeToFood.NetFrameWork.Data.Services
 {
     public interface IRestaurantData
     {

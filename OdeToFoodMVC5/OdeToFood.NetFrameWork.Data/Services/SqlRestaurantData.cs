@@ -1,12 +1,12 @@
-﻿
-using OdeToFood.Data.Models;
+﻿using OdeToFood.NetFrameWork.Data.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.Data.Entity;
 
-namespace OdeToFood.Data.Services
+namespace OdeToFood.NetFrameWork.Data.Services
 {
     public class SqlRestaurantData : IRestaurantData
     {
